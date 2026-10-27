@@ -1,0 +1,9 @@
+$ curl -s localhost:5000/health
+{"model_version":"2026.10.27","status":"ok"}
+
+$ curl -X POST /predict  # Co-86032, fresh, brix 19.5
+{"ccs":9.606,"grade":"B","model_version":"2026.10.27"}
+$ curl -X POST /predict  # Co-0238, 5 days after harvest
+{"ccs":8.582,"grade":"C","model_version":"2026.10.27"}
+$ curl -X POST /predict  # invalid: pol > brix
+{"error":"brix must be 10-30 and pol cannot exceed brix"}

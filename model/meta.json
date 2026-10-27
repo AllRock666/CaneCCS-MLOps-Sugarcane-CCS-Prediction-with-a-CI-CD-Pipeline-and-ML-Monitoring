@@ -1,0 +1,22 @@
+{
+  "model_version": "2026.10.27",
+  "algorithm": "GradientBoostingRegressor",
+  "features": [
+    "brix",
+    "pol",
+    "fibre_pct",
+    "trash_pct",
+    "days_since_harvest",
+    "variety_code"
+  ],
+  "varieties": [
+    "Co-86032",
+    "CoM-0265",
+    "Co-0238"
+  ],
+  "mae": 0.1178,
+  "r2": 0.9855,
+  "train_brix_mean": 19.516,
+  "train_brix_std": 1.599,
+  "n_train": 4800
+}

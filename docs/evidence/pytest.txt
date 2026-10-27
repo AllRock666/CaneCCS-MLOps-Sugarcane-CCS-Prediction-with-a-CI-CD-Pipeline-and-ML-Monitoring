@@ -1,0 +1,9 @@
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /usr/bin/python3
+collecting ... collected 6 items
+tests/test_app.py::test_health PASSED                                    [ 16%]
+tests/test_app.py::test_predict_ok PASSED                                [ 33%]
+tests/test_app.py::test_staleness_lowers_ccs PASSED                      [ 50%]
+tests/test_app.py::test_rejects_pol_above_brix PASSED                    [ 66%]
+tests/test_app.py::test_rejects_missing_field PASSED                     [ 83%]
+tests/test_app.py::test_metrics_exposed PASSED                           [100%]
+============================== 6 passed in 1.94s ===============================

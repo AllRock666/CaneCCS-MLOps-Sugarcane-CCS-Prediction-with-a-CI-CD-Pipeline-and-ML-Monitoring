@@ -1,0 +1,18 @@
+groups:
+  - name: cane-ml-alerts
+    rules:
+      - alert: CaneAppDown
+        expr: up{job="cane-app"} == 0
+        for: 15s
+        labels: {severity: critical}
+        annotations: {summary: "CaneCCS service is down"}
+      - alert: BrixInputDrift
+        expr: abs(cane_brix_drift_zscore) > 1.5
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: "Incoming brix distribution has drifted from training data"}
+      - alert: HighErrorRate
+        expr: rate(cane_prediction_errors_total[1m]) > 0.2
+        for: 30s
+        labels: {severity: warning}
+        annotations: {summary: "Many invalid prediction requests"}

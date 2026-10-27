@@ -1,0 +1,7 @@
+cane_http_requests_total{endpoint="health",status="200"} 1.0
+cane_http_requests_total{endpoint="predict",status="200"} 32.0
+cane_http_requests_total{endpoint="predict",status="400"} 1.0
+cane_predictions_total 32.0
+cane_prediction_errors_total 1.0
+cane_brix_drift_zscore 2.3352095059412146
+cane_model_info{algorithm="GradientBoostingRegressor",version="2026.10.27"} 1.0
