@@ -84,7 +84,11 @@ pipeline {
                 script {
                     sleep 8
                     if (isUnix()) {
-                        sh 'curl -f http://host.docker.internal:5000/health || curl -f http://localhost:5000/health'
+                        sh '''
+                            docker run --rm --network caneccs-pipeline_default curlimages/curl:latest -f http://cane-app:5000/health || \
+                            curl -f http://host.docker.internal:5000/health || \
+                            curl -f http://localhost:5000/health
+                        '''
                     } else {
                         bat 'curl -f http://localhost:5000/health'
                     }
