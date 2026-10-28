@@ -1,5 +1,5 @@
 {
-  "model_version": "2026.10.27",
+  "model_version": "2026.10.28",
   "algorithm": "GradientBoostingRegressor",
   "features": [
     "brix",
