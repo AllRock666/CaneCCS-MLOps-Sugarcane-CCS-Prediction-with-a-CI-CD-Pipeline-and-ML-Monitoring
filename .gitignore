@@ -3,3 +3,7 @@ __pycache__/
 venv/
 *.pyc
 model/*.joblib
+
+mlruns/
+mlflow.db
+report.xml

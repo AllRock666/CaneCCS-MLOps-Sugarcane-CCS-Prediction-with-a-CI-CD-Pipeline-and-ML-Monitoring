@@ -1,0 +1,19 @@
+{
+  "drift_type": "Data Drift (Covariate Shift on Brix / Sugar Quality Index)",
+  "significance_threshold_alpha": 0.05,
+  "zscore_alert_threshold": 1.5,
+  "normal_scenario": {
+    "mean_brix": 19.555,
+    "zscore": 0.024,
+    "ks_statistic": 0.116,
+    "p_value": 0.4831,
+    "drift_detected": false
+  },
+  "drifted_scenario": {
+    "mean_brix": 23.339,
+    "zscore": 2.39,
+    "ks_statistic": 0.7994,
+    "p_value": 0.0,
+    "drift_detected": true
+  }
+}
